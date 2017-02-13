@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Limit to 960px no matter the screen size */
+body {
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+footer {
+  padding: 25px;
+  border-top: 1px solid var(--border);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	font-weight: 100;
+}
+
+section {
+	max-width: 960px;
+	margin: auto;
+	padding: 50px 25px;
+}
+
+/* Set Max Width to original file size */
+img {
+	max-width:100%; 
+	height:auto
+}
+
+figure {
+	margin: 0;
+		overflow: scroll;
+}
+
+pre {
+	height: 18px;
+	margin-left: -35px;
+}
+
+iframe {
+	 overflow: hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.hero-content {
+	max-height: 750px;
+}
+
+.caret {
+	font-size: 100px;
+}
+
+.full {
+	width: 100%;
+	text-align: center;
+}
+
+.highlight {
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+
+ /*Small Devices, Tablets, Phones*/ 
+@media only screen and (max-width :768px) {
+
+}
+
+@media only screen and (max-width :480px) {
+
+}

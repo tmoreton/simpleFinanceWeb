@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Simple Finance</title>
+
+    <!-- Style Guide CSS -->
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/flex.css" rel="stylesheet">
+    <link href="css/font-sizes.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/hamburger.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/variables.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+<!-- Begin Nav -->
+  <header>
+    <div class="flex flex-12 nav center left">
+      <div class="hidden-desktop left">
+        <div id="open-close-nav" class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-3 flex-mobile-12 center">
+        <a href="/">
+          <img class="flex center" src="img/logo.jpg">
+        </a>
+      </div>
+      <div class="flex-2"></div>
+      <div class="menu flex flex-7 center" style="margin-bottom: 0;">
+        <a href="#parents" class="main">Compare</a>
+        <a href="#nonprofits" class="main">Track</a>
+        <a href="#school" class="main">History</a>
+        <a href="#contact" class="main">Contact</a>
+      </div>
+    </div> 
+  </header>
+<!-- End Nav -->
+
+<!-- Begin Hero Section -->
+  <div class="hero">
+    <div class="flex hero-content center">
+      <div class="flex-2 hidden-mobile"></div>
+      <div class="flex-5 flex-mobile-12" style="padding: 15px;">
+        <h2 style="text-align: center;">Simply Manage Your Finances</h2>
+        <br>
+        <p style="text-align: center;">Simple Finance was built to simplify the process of tracking your income and expenses. It's super simple to get started and create new categories as you spend.</p>
+        <br>
+        <div class="flex center">
+          <button onclick="openModal()">NOTIFY ME WHEN LIVE</button>
+        </div>
+      </div>
+      <div class="flex-5">
+        <img src="img/screen1.png">
+      </div>
+    </div>
+  </div>  
+<!-- End Hero Section -->
+
+  <div style="max-height: 750px;">
+    <section id="parents">
+      <div class="flex">
+        <div class="flex-5 center">
+          <img src="img/screen2.png">
+        </div>
+        <div class="flex-5 flex-mobile-12 center">
+          <h2 style="text-align: center; font-weight: bold;">COMPARE</h2>
+          <br>
+          <p style="text-align: center;">Compare what you spend money on the most to be aware of where your money actually goes after every paycheck.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div style="max-height: 750px;">
+    <section id="nonprofits">
+      <div class="flex">
+        <div class="flex-5 flex-mobile-12 center">
+          <h2 style="text-align: center; font-weight: bold;">TRACK</h2>
+          <br>
+          <p style="text-align: center;">Add, Remove & Modify expenses within a given week at anytime as you spend.</p>
+        </div>
+        <div class="flex-5 center">
+          <img src="img/screen3.png">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div style="max-height: 750px;">
+    <section id="school">
+      <div class="flex">
+        <div class="flex-5 center">
+          <img src="img/screen4.png">
+        </div>
+        <div class="flex-5 flex-mobile-12 center">
+          <h2 style="text-align: center; font-weight: bold;">HISTORY</h2>
+          <br>
+          <p style="text-align: center;">Check the history of your spending on a week by week basis and make changes accordingly to save more money in the long run!</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- Form Start -->
+  <section id="contact">
+    <h2 style="text-align: center;">CONTACT US</h2>
+    <br>
+    <!-- Form Start -->
+    <form id="contact-form" action="#" method="POST">
+      <div class="flex">
+        <input style="display:none;" type="text" name="honey" value=""/>
+        <div class="flex-6 flex-mobile-12" style="padding: 10px;">
+          <input required type="name" name="name" value="">
+          <label>Name <span>*</span></label>
+        </div>
+
+        <div class="flex-6 flex-mobile-12" style="padding: 10px;">
+          <input required type="email" name="email" value="">
+          <label>Email <span>*</span></label>
+        </div>
+
+        <div class="flex-12" style="padding: 10px;">
+          <textarea required type="text" name="message" value=""></textarea>
+          <label>Message <span>*</span></label>
+        </div>
+        <button type="submit" value="Submit" class="center form-submit">Submit</button>
+      </div>
+    </form>
+    <!-- Form End -->
+  </section>
+<!-- Form End -->
+
+  <footer>
+    <div class="flex center">
+      <p class="full">Simple Finance</p>
+      <p class="full">© 2017 All Rights Reserved</p>
+        <!-- <p><a href="/feed.xml">subscribe via RSS</a></p> -->
+    </div>
+  </footer>
+
+<!-- Modal Begin -->
+    <div id="modal" class="modal flex center">
+      <div class="modal-background" onclick="closeModal()"></div>
+      <div class="modal-content">
+        <p class="modal-close"  onclick="closeModal()">x</p>
+        <h4 style="margin-bottom: 20px;">Notify Me!</h4>
+        <!-- Begin MailChimp Signup Form -->
+        <section style="padding-top: 0;">
+          <div id="mc_embed_signup" class="flex-6 center">
+            <form action="//ImagineMyApp.us3.list-manage.com/subscribe/post?u=039197b0b22c39f4adf21fc88&amp;id=5f2f2e2605" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="mc-field-group">
+                <input style="    margin-bottom: 20px;" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+              </div>
+
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_039197b0b22c39f4adf21fc88_61db42cdca" tabindex="-1" value=""></div>
+              <button type="submit" value="Subscribe" class="flex center" name="subscribe" id="mc-embedded-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </section>
+        <!--End mc_embed_signup-->
+      </div>
+    </div>
+<!-- Modal End --> 
+
+    <!-- Style Guide JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
